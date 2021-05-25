@@ -16,10 +16,10 @@ export class Question {
     <div class="card p-5" style="color:#${this.color};">
     <h3>Category: ${this.category}</h3>
     <h2>${this.question}</h2>
-    <button class="btn btn-info m-1" onclick="app.questionsController.selectAnswer('${randomize[0]}', '${this.answer}','${this.color}')">${randomize[0]}</button>
-    <button class="btn btn-info m-1" onclick="app.questionsController.selectAnswer('${randomize[1]}', '${this.answer}','${this.color}')">${randomize[1]}</button>
-    ${randomize[2] ? `<button class="btn btn-info m-1" onclick="app.questionsController.selectAnswer('${randomize[2]}', '${this.answer}','${this.color}')">${randomize[2]}</button>` : ''}
-    ${randomize[3] ? `<button class="btn btn-info m-1" onclick="app.questionsController.selectAnswer('${randomize[3]}', '${this.answer}','${this.color}')">${randomize[3]}</button>` : ''}
+    <button class="btn btn-info m-1" onclick='app.questionsController.selectAnswer("${randomize[0]}", "${this.answer}","${this.color}")'>${randomize[0]}</button>
+    <button class="btn btn-info m-1" onclick='app.questionsController.selectAnswer("${randomize[1]}","${this.answer}","${this.color}")'>${randomize[1]}</button>
+    ${randomize[2] ? `<button class="btn btn-info m-1" onclick='app.questionsController.selectAnswer("${randomize[2]}", "${this.answer}","${this.color}")'>${randomize[2]}</button>` : ''}
+    ${randomize[3] ? `<button class="btn btn-info m-1" onclick='app.questionsController.selectAnswer("${randomize[3]}", "${this.answer}","${this.color}")'>${randomize[3]}</button>` : ''}
     </div>
     `
   }
