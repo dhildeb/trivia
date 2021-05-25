@@ -37,7 +37,7 @@ class TriviasService {
         toast: true,
         position: 'top-end',
         showConfirmButton: false,
-        timer: 1500,
+        timer: 2000,
         timerProgressBar: true,
         didOpen: (toast) => {
           toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -47,7 +47,7 @@ class TriviasService {
 
       Toast.fire({
         icon: 'error',
-        title: 'Wrong answer, dummy'
+        title: `Wrong answer, dummy \n correct answer: ${answer}`
       })
     }
     ProxyState.questions = ProxyState.questions.filter(q => q.color != id)
