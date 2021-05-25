@@ -9,11 +9,9 @@ class TriviasService {
 
     ProxyState.questions = data.results.map(q => new Question(q))
     ProxyState.correctAnswers = 0
-    console.log(ProxyState.questions)
   }
 
   selectAnswer(selected, answer, id) {
-    console.log(selected, answer)
     if (selected == answer) {
       ProxyState.correctAnswers++
       const Toast = Swal.mixin({

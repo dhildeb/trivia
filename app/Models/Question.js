@@ -1,3 +1,4 @@
+import { randomizeArr } from "../Utils/randomizeArr.js"
 
 export class Question {
   constructor(data) {
@@ -11,14 +12,19 @@ export class Question {
   }
 
   get template() {
-    let randomize = this.answerOptions.map((a) => ({ sort: Math.random(), value: a })).sort((a, b) => a.sort - b.sort).map((a) => a.value)
+    let randomize = randomizeArr(this.answerOptions)
+
     return `
     <div class="card p-5" style="color:#${this.color};">
-    <h3>Category: ${this.category}</h3>
-    <h2>${this.question}</h2>
+    <h6>Category: ${this.category}</h6>
+    <h4>${this.question}</h4>
+
     <button class="btn btn-info m-1" onclick='app.questionsController.selectAnswer("${randomize[0]}", "${this.answer}","${this.color}")'>${randomize[0]}</button>
+
     <button class="btn btn-info m-1" onclick='app.questionsController.selectAnswer("${randomize[1]}","${this.answer}","${this.color}")'>${randomize[1]}</button>
+
     ${randomize[2] ? `<button class="btn btn-info m-1" onclick='app.questionsController.selectAnswer("${randomize[2]}", "${this.answer}","${this.color}")'>${randomize[2]}</button>` : ''}
+
     ${randomize[3] ? `<button class="btn btn-info m-1" onclick='app.questionsController.selectAnswer("${randomize[3]}", "${this.answer}","${this.color}")'>${randomize[3]}</button>` : ''}
     </div>
     `
