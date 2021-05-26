@@ -1,0 +1,21 @@
+.trivia-time {
+  font-size: 70px;
+  color: #0783ff;
+  font-family: Impact, Charcoal, sans-serif;
+  text-shadow: 0px 0px 0 rgb(-14,110,234),
+               -1px 1px 0 rgb(-35,89,213),
+               -2px 2px 0 rgb(-57,67,191),
+               -3px 3px 0 rgb(-78,46,170),
+               -4px 4px 0 rgb(-99,25,149),
+               -5px 5px 0 rgb(-120,4,128),
+               -6px 6px 0 rgb(-142,-18,106),
+               -7px 7px 0 rgb(-163,-39,85),
+               -8px 8px 0 rgb(-184,-60,64),
+               -9px 9px 0 rgb(-205,-81,43),
+               -10px 10px 0 rgb(-227,-103,21),
+               -11px 11px 0 rgb(-248,-124,0),
+               -12px 12px  0 rgb(-269,-145,0),
+               -13px 13px 12px rgba(28,0,189,0.6),
+               -13px 13px 1px rgba(28,0,189,0.5),
+               0px 0px 12px rgba(28,0,189,.2);
+}

@@ -3,7 +3,7 @@ import { triviasService } from "../Services/TriviasService.js"
 
 
 function _drawQuestions() {
-  let template = `<h1 class="mx-3 font-weight-bold" style="-webkit-text-stroke: 1px white; color:#3c50d2;text-shadow: -5px 2px 10px #162ec9;">Score: ${ProxyState.correctAnswers}/10</h1>`
+  let template = `<h1 class="mx-3 trivia-time" style="font-size:30px;">Score: ${ProxyState.correctAnswers}/10</h1>`
   // display all questions
   // ProxyState.questions.forEach(q => template += q.template)
   if (ProxyState.questions[0] != undefined) {
